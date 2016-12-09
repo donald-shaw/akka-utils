@@ -3,7 +3,8 @@ package org.shadowlands
 import _root_.akka.actor.{ActorRef, ActorRefFactory, Props}
 import java.time.ZonedDateTime
 
-package object akka {
+package object injections {
+  // Injectable helpers that can be overridden in test code to enable easier testing
 
   trait Clock {
     def zdt_now: ZonedDateTime
@@ -23,3 +24,5 @@ package object akka {
     }
   }
 }
+
+
